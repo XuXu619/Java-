@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package b1;
+package B3;
 
 import java.util.Locale;
 import java.util.Scanner;
@@ -12,31 +12,48 @@ import java.util.Scanner;
  *
  * @author tranthu
  */
-public class B1 {
+public class NewClass {
 
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
         // TODO code application logic here
-        System.out.println("Nhap ho va ten: ");
-        Scanner sc = new Scanner(System.in);
-        String hoten = sc.nextLine();
-        String arr[] = hoten.trim().split("\\s+");
-        
-        String ho = "";
-        String tenDem = "";
-        String ten = "";
-        if(arr.length > 2)
-        {
-            ho = arr[0].toUpperCase();
-            tenDem = arr[1].toUpperCase();
-            ten = arr[2].toUpperCase();
-            
+       Scanner input =new Scanner(System.in);
+        int [] a=new int[5];
+        int i,j,tg;
+        System.out.println("Nhap vao cac phan tu cua mang");
+        for(i=0;i<5;i++){
+            System.out.print("a"+"["+i+"]"+"=" );
+            a[i]=input.nextInt();
         }
-        System.out.println("Ho: " +ho);
-        System.out.println("Ten dem: " +tenDem);
-        System.out.println("Ho: " +ten);
+        
+        System.out.println("Sap xep cac phan tu cua mang theo chieu tang dan:");
+        for(i=0;i<5;i++){
+            for(j=i+1;j<5;j++)
+            {
+                if(a[i]>a[j]){
+                    tg=a[i];
+                    a[i]=a[j];
+                    a[j]=tg;
+                }
+            }
+            System.out.print("a"+"["+i+"]"+"=");
+            System.out.println(a[i]);
+        }
+ System.out.println("Sap xep cac phan tu cua mang theo chieu giam dan:");
+        for(i=0;i<5;i++){
+            for(j=i+1;j<5;j++)
+            {
+                if(a[i]<a[j]){
+                    tg=a[i];
+                    a[i]=a[j];
+                    a[j]=tg;
+                }
+            }
+            System.out.print("a"+"["+i+"]"+"=");
+            System.out.println(a[i]);
+        }
     }
-    
-}
+} 
+
