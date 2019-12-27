@@ -3,24 +3,38 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package B2;
+package B3;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
  *
  * @author tranthu
  */
-public class java {
+public class NewClass {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        System.out.println("Nhap chuoi: ");
-        
-        String string = "";
-        while(string.length() < 8)
-        {
-            Scanner sc = new Scanner(System.in);
-            string = sc.nextLine();
-            
-        } 
-    }
-}
+        // TODO code application logic here
+        int sum = 0 ;
+        System.out.print("Nhập số phần tử của mảng: ");
+        int n = scanner.nextInt();
+        // khởi tạo mảng arr
+        int[] arr = new int[n];
+        System.out.print("Nhập các phần tử của mảng: \n");
+        for (int i = 0; i < n; i++) {
+            System.out.printf("a[%d] = ", i);
+            arr[i] = scanner.nextInt();
+        }
+        for (double element : arr){ 
+                
+            sum += element;
+        }   
+        System.out.println("Tong = " + sum);
+       
+    }}
+
