@@ -1,0 +1,87 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package B3;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+/**
+ *
+ * @author tranthu
+ */
+public class NewClass {
+    
+    public static boolean snt(int n){
+        if(n == 1) return false;
+        for (int i = 2; i <= Math.sqrt(n); i++) {
+            if(n%1 == 0) return false;
+           
+        }return true; 
+    }
+    
+    public static Scanner scanner = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+    int m1, n1; // số dòng và số cột của ma trận A
+    int m2, n2; // số dòng và số cột của ma trận B
+    char choose;
+    Scanner scanner = new Scanner(System.in);
+         
+    System.out.println("Nhập vào số dòng của ma trận A: ");
+    m1 = scanner.nextInt();
+    System.out.println("Nhập vào số cột của ma trận A: ");
+    n1 = scanner.nextInt();
+         
+    System.out.println("Nhập vào số dòng của ma trận B: ");
+    m2 = scanner.nextInt();
+    System.out.println("Nhập vào số cột của ma trận B: ");
+    n2 = scanner.nextInt();
+         
+    int[][] A = new int[m1][n1];
+    int[][] B = new int[m2][n2];
+    int C[][] = new int[m1][n2];
+         
+    while (m1 > 0 && n1 > 0 && m2 > 0 && n2 > 0) {
+        if (n1 != m2) {
+            System.out.println("Để nhân hai ma trận thì "
+                    + "số cột của ma trận A phải bằng số dòng của ma trận B");
+            System.out.println("Nhập lại số cột của ma trận A: ");
+            n1 = scanner.nextInt();
+            System.out.println("Nhập vào số dòng của ma trận B: ");
+            m2 = scanner.nextInt();
+        } else {
+            System.out.println("Nhập vào các phần tử của ma trận A: ");
+            for (int i = 0; i < m1; i++) {
+                for (int j = 0; j < n1; j++) {
+                    System.out.print("A[" + i + "]["+ j + "] = ");
+                    A[i][j] = scanner.nextInt();
+                }
+            }
+            System.out.println("Nhập vào các phần tử của ma trận A: ");
+            for (int i = 0; i < m2; i++) {
+                for (int j = 0; j < n2; j++) {
+                    System.out.print("B[" + i + "]["+ j + "] = ");
+                    B[i][j] = scanner.nextInt();
+                }
+            } 
+            for (int i = 0; i < m1; i++) {
+                for (int j = 0; j < n2; j++) {
+                    C[i][j] = 0;
+                    for (int k = 0; k < n1; k++) {
+                        C[i][j] = C[i][j] + A[i][k] * B[k][j];
+                    }
+                }
+            }
+            System.out.println("Ma trận tích C: ");
+            for (int i = 0; i < m1; i++) {
+                for (int j = 0; j < n2; j++) {
+                    System.out.print(C[i][j] + "\t");
+                }
+                System.out.println("\n");
+            }
+    }} 
+      
+    } } 
