@@ -1,0 +1,41 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package B3;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+/**
+ *
+ * @author tranthu
+ */   
+    public static Scanner scanner = new Scanner(System.in);
+    
+    public static void main(String[] args) {
+    int n = 0;
+    String chuoiA; 
+    Scanner scanner = new Scanner(System.in);    
+    System.out.println("Nhập vào chuỗi A: ");
+    chuoiA = scanner.nextLine();
+    System.out.println("Mời chọn: ");
+    System.out.println("1. Viết hoa toàn bộ chuỗi");
+    System.out.println("2. Viết hoa thường bộ chuỗi");
+    n = scanner.nextInt();
+    switch(n){
+       case 1:{
+           System.out.println(chuoiA.toUpperCase());
+           break;
+       }
+       case 2:{
+        System.out.println(chuoiA.toCharArray());
+        break;
+        }
+    }
+    }
+}
+
+    
+      
