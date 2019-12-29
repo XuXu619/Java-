@@ -13,15 +13,7 @@ import java.util.Scanner;
  * @author tranthu
  */
 public class NewClass {
-    
-    public static boolean snt(int n){
-        if(n == 1) return false;
-        for (int i = 2; i <= Math.sqrt(n); i++) {
-            if(n%1 == 0) return false;
-           
-        }return true; 
-    }
-    
+
     public static Scanner scanner = new Scanner(System.in);
     
     public static void main(String[] args) {
